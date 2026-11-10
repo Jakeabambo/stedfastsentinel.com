@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Stedfast Sentinel</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Stedfast Sentinel LLC: fractional CISO, NIST SP 800-171 and OT/ICS security for defense manufacturers. Service-disabled veteran-owned. Maple Grove, Minnesota.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<style>
+/* Layout: a watch-post ledger. Left-aligned editorial column, a control-ID mono rail, one amber signal accent. */
+:root{
+  --paper:#f3f4f2; --sheet:#ffffff; --ink:#15202b; --muted:#56626e; --rule:#d5dadd;
+  --steel:#2f4a5f; --signal:#c8821e; --signal-ink:#7a4c0c; --band:#15202b; --band-ink:#e9edf0;
+  --display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#0f161d; --sheet:#151f28; --ink:#e6ebef; --muted:#9aa7b2; --rule:#26333f;
+  --steel:#8fb0c8; --signal:#e3a03f; --signal-ink:#f0c27c; --band:#0a1016; --band-ink:#e6ebef; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0f161d; --sheet:#151f28; --ink:#e6ebef; --muted:#9aa7b2; --rule:#26333f;
+  --steel:#8fb0c8; --signal:#e3a03f; --signal-ink:#f0c27c; --band:#0a1016; --band-ink:#e6ebef; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--body);margin:0}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--signal);outline-offset:3px}
+.mono{font-family:var(--mono);font-size:13px;letter-spacing:.02em}
+.eyebrow{font-family:var(--mono);font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--steel)}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.05}
+h1{font-size:clamp(40px,7vw,78px);font-weight:800;font-stretch:78%;letter-spacing:-.01em}
+h2{font-size:clamp(28px,4vw,40px);font-weight:750;font-stretch:82%}
+h3{font-size:21px;font-weight:700;font-stretch:90%}
+p{margin:0}
+.lede{max-width:60ch;color:var(--muted);font-size:19px}
+
+header.top{border-bottom:1px solid var(--rule)}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:18px;flex-wrap:wrap}
+.mark{display:flex;align-items:center;gap:12px;text-decoration:none}
+.mark b{font-family:var(--display);font-weight:800;font-stretch:80%;font-size:22px;letter-spacing:.02em;text-transform:uppercase}
+.lamp{width:12px;height:12px;border-radius:50%;background:var(--signal);box-shadow:0 0 0 4px color-mix(in srgb,var(--signal) 22%,transparent)}
+@media (prefers-reduced-motion:no-preference){.lamp{animation:watch 3.2s ease-in-out infinite}
+  @keyframes watch{50%{box-shadow:0 0 0 7px color-mix(in srgb,var(--signal) 8%,transparent)}}}
+nav{display:flex;gap:20px;flex-wrap:wrap}
+nav a{text-decoration:none;font-size:15px;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+
+.hero .wrap{padding-block:72px 56px;display:grid;gap:28px}
+.hero h1 em{font-style:normal;color:var(--signal-ink)}
+.cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.btn{display:inline-block;padding:13px 22px;background:var(--ink);color:var(--paper);text-decoration:none;font-weight:600;border-radius:2px}
+.btn:hover{background:var(--steel)}
+.ghost{font-size:15px;color:var(--muted)}
+
+/* SPRS gauge: the subject's own scale */
+.gauge{background:var(--sheet);border:1px solid var(--rule);padding:24px;display:grid;gap:14px}
+.scale{position:relative;height:14px;background:linear-gradient(90deg,color-mix(in srgb,var(--signal) 55%,transparent),color-mix(in srgb,var(--steel) 40%,transparent));border-radius:1px}
+.tick{position:absolute;top:-6px;width:2px;height:26px;background:var(--ink)}
+.ticks{position:relative;display:flex;justify-content:space-between;font-family:var(--mono);font-size:13px;color:var(--muted)}
+.ticks .zl{position:absolute;left:64.9%;transform:translateX(-50%)}
+.zero{position:absolute;left:64.9%}
+
+section{padding-block:64px;border-top:1px solid var(--rule)}
+.head{display:grid;gap:12px;margin-bottom:36px;max-width:68ch}
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0;border-top:2px solid var(--ink)}
+.svc article{padding:24px 22px 28px 0;display:grid;gap:10px;align-content:start;border-bottom:1px solid var(--rule)}
+.svc article+article{padding-left:22px;border-left:1px solid var(--rule)}
+@media (max-width:560px){.svc article+article{padding-left:0;border-left:0}}
+.svc .ref{font-family:var(--mono);font-size:12.5px;color:var(--signal-ink)}
+.svc p{color:var(--muted);font-size:16px}
+
+.record{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:48px}
+@media (max-width:820px){.record{grid-template-columns:1fr;gap:28px}}
+.creds{display:flex;flex-wrap:wrap;gap:8px}
+.creds span{font-family:var(--mono);font-size:13px;padding:5px 10px;border:1px solid var(--rule);background:var(--sheet)}
+.log{display:grid;gap:0;border-top:2px solid var(--ink)}
+.log div{display:grid;grid-template-columns:150px minmax(0,1fr);gap:18px;padding:18px 0;border-bottom:1px solid var(--rule)}
+@media (max-width:560px){.log div{grid-template-columns:1fr;gap:4px}}
+.log dt{font-family:var(--display);font-weight:700;font-stretch:88%;font-size:17px}
+.log dd{margin:0;color:var(--muted);font-size:16px}
+
+.band{background:var(--band);color:var(--band-ink);border-top:0}
+.band .eyebrow{color:color-mix(in srgb,var(--band-ink) 70%,transparent)}
+.data{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px 32px;margin-top:28px}
+.data div{display:grid;gap:4px;border-top:1px solid color-mix(in srgb,var(--band-ink) 25%,transparent);padding-top:12px}
+.data b{font-family:var(--mono);font-weight:500;font-size:17px;font-variant-numeric:tabular-nums}
+.data span{font-size:13px;letter-spacing:.08em;text-transform:uppercase;opacity:.7}
+
+.contact{display:grid;gap:18px;max-width:640px}
+.line{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-family:var(--mono);font-size:16px}
+.copy{font:500 13px var(--body);padding:6px 12px;border:1px solid var(--rule);background:var(--sheet);color:var(--ink);cursor:pointer;border-radius:2px}
+footer{border-top:1px solid var(--rule)}
+footer .wrap{padding-block:28px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#top"><span class="lamp" aria-hidden="true"></span><b>Stedfast Sentinel</b></a>
+    <nav aria-label="Sections"><a href="#services">Services</a><a href="#record">Track record</a><a href="#contact">Contact</a></nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero"><div class="wrap">
+    <p class="eyebrow">Cybersecurity for defense manufacturers · Maple Grove, MN</p>
+    <h1>Keep your CUI safe and your <em>DoD contracts</em> secure.</h1>
+    <p class="lede">Stedfast Sentinel gives small and mid-size defense suppliers a seasoned CISO without the full-time cost. We build NIST SP 800-171 programs that survive an assessment, secure the shop floor, and brief your owners in plain terms.</p>
+    <div class="cta"><a class="btn" href="#contact">Book a readiness call</a><span class="ghost">Service-disabled veteran-owned small business</span></div>
+
+    <div class="gauge" aria-label="SPRS score range from minus 203 to 110">
+      <p class="eyebrow">Your SPRS score, on its real scale</p>
+      <div class="scale"><span class="tick zero" aria-hidden="true"></span></div>
+      <div class="ticks"><span>−203</span><span class="zl">0</span><span>110</span></div>
+      <p style="color:var(--muted);font-size:15px">DoD scores every supplier from −203 to 110. Each NIST SP 800-171 requirement you can't show costs 1, 3 or 5 points. We find where your points went and get them back in order of risk.</p>
+    </div>
+  </div></div>
+
+  <section id="services"><div class="wrap">
+    <div class="head"><p class="eyebrow">Services</p><h2>Security leadership sized for a supplier, not a prime.</h2></div>
+    <div class="svc">
+      <article><p class="ref">NIST SP 800-171 · SPRS</p><h3>Readiness Check</h3><p>A fixed-price gap assessment in two to three weeks: SPRS score review, a prioritized fix list, and a briefing for leadership.</p></article>
+      <article><p class="ref">DFARS 252.204-7012 · CMMC L2</p><h3>Compliance Program Build</h3><p>System Security Plan, POA&amp;M, policies, enclave design and an evidence binder, built to hold up in a third-party assessment.</p></article>
+      <article><p class="ref">Fractional CISO</p><h3>Security Leadership</h3><p>Ongoing program ownership: risk reporting, customer questionnaires, incident response planning and board briefings.</p></article>
+      <article><p class="ref">OT / ICS · SCADA</p><h3>Shop-Floor Security</h3><p>Segment machines from the business network and put a workable risk plan around legacy controllers you can't replace.</p></article>
+    </div>
+  </div></section>
+
+  <section id="record"><div class="wrap record">
+    <div class="head" style="margin:0">
+      <p class="eyebrow">Principal</p>
+      <h2>Dr. Jacob Stedman</h2>
+      <p class="lede" style="font-size:17px">Former CISO at two defense manufacturers and a U.S. Navy civilian cyber engineer. He has run these programs from the inside, so the advice fits how a plant actually operates.</p>
+      <div class="creds"><span>D.Sc. Cybersecurity</span><span>CISSP</span><span>Secret clearance</span><span>U.S. Navy veteran</span></div>
+    </div>
+    <dl class="log">
+      <div><dt>AdvancedPCB</dt><dd>CISO for a six-site circuit board manufacturer. Wrote and led the NIST SP 800-171 / CMMC program that later earned CMMC Level 2 certification. Owned the security budget and briefed the board.</dd></div>
+      <div><dt>Janicki Industries</dt><dd>Acting CISO at an aerospace manufacturer. Built the cybersecurity department from scratch, led AI security governance, and automated customer security questionnaires.</dd></div>
+      <div><dt>U.S. Navy</dt><dd>Co-conceived the Navy's first SCADA threat hunting kit, worked closely with Johns Hopkins APL on the MOSAICS ICS defense program, and supported a FedRAMP Moderate authorization.</dd></div>
+    </dl>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <p class="eyebrow">Company data for contracting officers</p>
+    <h2>Stedfast Sentinel LLC</h2>
+    <div class="data">
+      <div><b>YH7WAK7UGLW9</b><span>UEI</span></div>
+      <div><b>10AL0</b><span>CAGE code</span></div>
+      <div><b>541512</b><span>Primary NAICS</span></div>
+      <div><b>DJ01 · R408</b><span>Key PSCs</span></div>
+      <div><b>SDVOSB · VOSB</b><span>Veteran-owned</span></div>
+    </div>
+  </div></section>
+
+  <section id="contact"><div class="wrap contact">
+    <p class="eyebrow">Contact</p>
+    <h2>Start with a 30-minute readiness call.</h2>
+    <p class="lede" style="font-size:17px">Tell us what your customers are asking for and where your SPRS score stands. We'll tell you what to fix first.</p>
+    <div class="line"><span id="em">jacob.stedman@stedfastsentinel.com</span><button class="copy" id="copy-email" type="button">Copy email</button></div>
+    <div class="line"><span>(916) 842-0847</span></div>
+  </div></section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Stedfast Sentinel LLC · Maple Grove, Minnesota</span><span class="mono">Service-disabled veteran-owned small business</span></div></footer>
+
+<script>
+document.getElementById('copy-email').addEventListener('click', function(){
+  var t=document.getElementById('em').textContent, b=this;
+  var done=function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy email'},1600)};
+  try{navigator.clipboard.writeText(t).then(done,function(){sel()})}catch(e){sel()}
+  function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('em'));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected, press Ctrl+C'}
+});
+</script>
+
+</body>
+</html>
