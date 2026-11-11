@@ -7,12 +7,13 @@
 <meta name="description" content="Stedfast Sentinel gives defense manufacturers a former CISO who has built CMMC Level 2 programs from the inside. NIST SP 800-171, SPRS, fractional CISO and OT/ICS security. SBA-certified service-disabled veteran-owned small business (SDVOSB). Maple Grove, Minnesota.">
 <link rel="canonical" href="https://stedfastsentinel.com/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Stedfast Sentinel | CMMC security led by a former defense-manufacturing CISO">
 <meta property="og:description" content="NIST SP 800-171, SPRS and CMMC Level 2 readiness, fractional CISO and shop-floor OT security for defense suppliers. SBA-certified SDVOSB.">
 <meta property="og:url" content="https://stedfastsentinel.com/">
 <meta property="og:image" content="https://stedfastsentinel.com/jacob-stedman.jpg">
-<meta name="theme-color" content="#0e1a26">
+<meta name="theme-color" content="#0b1f33">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -42,8 +43,8 @@
 </script>
 <style>
 :root{
-  --ink:#0e1a26; --ink-2:#16263a; --paper:#f4f5f2; --sheet:#ffffff; --text:#16202b; --muted:#56626e;
-  --rule:#d8dde1; --steel:#2f4a5f; --signal:#d08a22; --signal-ink:#8a5508; --signal-soft:#fbf1e1;
+  --ink:#0b1f33; --ink-2:#132b44; --paper:#f4f5f2; --sheet:#ffffff; --text:#16202b; --muted:#56626e;
+  --rule:#d8dde1; --steel:#2f4a5f; --signal:#c9a13b; --signal-ink:#7d6118; --signal-soft:#f8f1df;
   --on-ink:#e6ecf1; --on-ink-muted:#9fb0bf; --ok:#2f7a55;
   --display:"Archivo","Arial Narrow",Arial,sans-serif;
   --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
@@ -67,17 +68,17 @@ p{margin:0}
 .lede{font-size:19px;color:var(--muted);max-width:62ch}
 .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:3px;font-weight:600;text-decoration:none;border:1px solid transparent;cursor:pointer;font-size:16px;font-family:var(--body)}
 .btn-signal{background:var(--signal);color:#1b1206}
-.btn-signal:hover{background:#e39a2f}
+.btn-signal:hover{background:#d8b252}
 .btn-line{border-color:currentColor}
 .btn-line:hover{background:rgba(255,255,255,.08)}
 .btn-ink{background:var(--ink);color:#fff}
 .btn-ink:hover{background:var(--steel)}
 
 /* header */
-.top{position:sticky;top:0;z-index:20;background:rgba(14,26,38,.96);backdrop-filter:saturate(1.2) blur(8px);color:var(--on-ink);border-bottom:1px solid rgba(255,255,255,.08)}
+.top{position:sticky;top:0;z-index:20;background:rgba(11,31,51,.96);backdrop-filter:saturate(1.2) blur(8px);color:var(--on-ink);border-bottom:1px solid rgba(255,255,255,.08)}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-.brand svg{width:34px;height:34px;flex:none}
+.brand svg{width:40px;height:40px;flex:none}
 .brand b{font:800 20px/1 var(--display);font-stretch:78%;letter-spacing:.04em;text-transform:uppercase}
 .brand small{display:block;font:500 10.5px/1.2 var(--mono);letter-spacing:.14em;color:var(--on-ink-muted);text-transform:uppercase;margin-top:3px}
 .nav{display:flex;align-items:center;gap:26px}
@@ -94,7 +95,7 @@ p{margin:0}
 }
 
 /* hero */
-.hero{background:radial-gradient(1200px 500px at 85% -10%,#21405a 0%,transparent 60%),var(--ink);color:var(--on-ink);overflow:hidden}
+.hero{background:radial-gradient(1200px 500px at 85% -10%,#1d4166 0%,transparent 60%),var(--ink);color:var(--on-ink);overflow:hidden}
 .hero .wrap{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.9fr);gap:56px;align-items:center;padding-block:84px 72px}
 @media (max-width:900px){.hero .wrap{grid-template-columns:1fr;gap:40px;padding-block:56px}}
 .hero .eyebrow{color:var(--signal)}
@@ -103,9 +104,9 @@ p{margin:0}
 .hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
 .hero .note{margin-top:22px;font-size:14px;color:var(--on-ink-muted);display:flex;flex-wrap:wrap;gap:8px 18px}
 .hero .note span::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--signal);margin-right:8px;vertical-align:1px}
-.card-id{background:linear-gradient(180deg,#14283b,#102130);border:1px solid rgba(255,255,255,.1);border-radius:6px;padding:26px;display:grid;gap:18px;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+.card-id{background:linear-gradient(180deg,#15304d,#0f2740);border:1px solid rgba(255,255,255,.1);border-radius:6px;padding:26px;display:grid;gap:18px;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
 .card-id .who{display:flex;gap:18px;align-items:center}
-.card-id img{width:104px;height:104px;border-radius:50%;object-fit:cover;border:3px solid rgba(208,138,34,.85)}
+.card-id img{width:104px;height:104px;border-radius:50%;object-fit:cover;border:3px solid rgba(201,161,59,.9)}
 .card-id .who b{display:block;font:760 24px/1.1 var(--display);font-stretch:86%}
 .card-id .who span{color:var(--on-ink-muted);font-size:15px}
 .creds{display:flex;flex-wrap:wrap;gap:8px}
@@ -141,7 +142,7 @@ section{padding-block:88px}
 .sprs label{font-weight:600;display:block;margin-bottom:6px}
 .score{font:800 64px/1 var(--display);font-stretch:78%;font-variant-numeric:tabular-nums}
 .track{position:relative;margin-top:18px}
-.bar{height:14px;border-radius:2px;background:linear-gradient(90deg,#b8442e 0%,#d08a22 55%,#d08a22 92%,#2f7a55 100%)}
+.bar{height:14px;border-radius:2px;background:linear-gradient(90deg,#b8442e 0%,#c9a13b 55%,#c9a13b 92%,#2f7a55 100%)}
 .ticks{position:relative;height:22px;font:500 12.5px var(--mono);color:var(--muted);margin-top:6px}
 .ticks span{position:absolute;transform:translateX(-50%);white-space:nowrap}
 .ticks span:first-child{transform:none;left:0}
@@ -185,7 +186,7 @@ input[type=range]{width:100%;margin-top:14px;accent-color:var(--ink)}
 .results .head p{color:var(--on-ink-muted)}
 .cases{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
 @media (max-width:820px){.cases{grid-template-columns:1fr}}
-.case{background:#132435;border:1px solid rgba(255,255,255,.09);padding:28px;display:grid;gap:14px;align-content:start}
+.case{background:#123050;border:1px solid rgba(255,255,255,.09);padding:28px;display:grid;gap:14px;align-content:start}
 .case .k{font:500 12.5px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--on-ink-muted)}
 .case .big{font:800 44px/1 var(--display);font-stretch:78%;color:var(--signal)}
 .case p{color:var(--on-ink-muted);font-size:16px}
@@ -246,15 +247,15 @@ input[type=range]{width:100%;margin-top:14px;accent-color:var(--ink)}
 .line{display:flex;flex-wrap:wrap;align-items:center;gap:12px;font:500 17px var(--mono)}
 .line a{text-decoration:none;border-bottom:1px solid rgba(255,255,255,.3)}
 .copy{font:500 13px var(--body);padding:6px 12px;border:1px solid rgba(255,255,255,.25);background:transparent;color:var(--on-ink);border-radius:2px;cursor:pointer}
-form{background:#132435;border:1px solid rgba(255,255,255,.1);padding:28px;display:grid;gap:16px}
+form{background:#123050;border:1px solid rgba(255,255,255,.1);padding:28px;display:grid;gap:16px}
 form label{display:grid;gap:6px;font-size:14.5px;color:var(--on-ink-muted)}
-form input,form select,form textarea{font:400 16px var(--body);padding:12px 14px;border-radius:3px;border:1px solid rgba(255,255,255,.18);background:#0e1a26;color:#fff;width:100%}
+form input,form select,form textarea{font:400 16px var(--body);padding:12px 14px;border-radius:3px;border:1px solid rgba(255,255,255,.18);background:#0b1f33;color:#fff;width:100%}
 form textarea{min-height:110px;resize:vertical}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 @media (max-width:520px){.row2{grid-template-columns:1fr}}
 form .fine{color:var(--on-ink-muted);margin:0}
 
-footer{background:#0a131c;color:var(--on-ink-muted);font-size:14px}
+footer{background:#081828;color:var(--on-ink-muted);font-size:14px}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-block:28px}
 footer a{color:var(--on-ink-muted)}
 </style>
@@ -264,7 +265,7 @@ footer a{color:var(--on-ink-muted)}
 <header class="top">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Stedfast Sentinel home">
-      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3.5 27 7.4v8c0 6.8-4.5 11.4-11 13.9C9.5 26.8 5 22.2 5 15.4v-8z" fill="none" stroke="#e6ecf1" stroke-width="2" stroke-linejoin="round"/><circle cx="16" cy="15" r="3.8" fill="#d08a22"/><path d="M9.5 15h-2M24.5 15h-2" stroke="#d08a22" stroke-width="2" stroke-linecap="round"/></svg>
+      <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M24 15.5 5 10.5v15l19-5z M40 15.5 59 10.5v15l-19-5z" fill="#c9a13b"/><path d="M23.5 14 32 7 40.5 14z" fill="#e8edf2"/><path d="M25.5 14h13v8.5h-13z" fill="#e8edf2"/><rect x="28.2" y="16" width="7.6" height="4.6" fill="#c9a13b"/><rect x="22.5" y="22.5" width="19" height="3" fill="#e8edf2"/><path d="M28 25.5h8l3.6 26.5H24.4z" fill="#e8edf2"/><path d="M10 56.5c3.7-2.6 7.3-2.6 11 0s7.3 2.6 11 0 7.3-2.6 11 0 7.3 2.6 11 0" fill="none" stroke="#e8edf2" stroke-width="2.8" stroke-linecap="round"/></svg>
       <span><b>Stedfast Sentinel</b><small>Defense-industry cybersecurity</small></span>
     </a>
     <button class="menu" id="menu" aria-expanded="false" aria-controls="nav">Menu</button>
